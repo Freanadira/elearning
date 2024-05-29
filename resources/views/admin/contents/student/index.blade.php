@@ -13,6 +13,7 @@
     <section class="section">
         <div class="card">
             <div class="card-body">
+                <a href="admin/student/create/" class="btn btn-primary my-3">+ Student</a>
                 <table class="table">
                     <tr>
                         <th>No</th>
@@ -30,7 +31,7 @@
                             <td>{{ $student->class }}</td>
                             <td>{{ $student->major }}</td>
                             <td>
-                                <a href="" class="btn btn-warning">Edit</a>
+                                <a href="/admin/student/edit/{{ $student->id }}" class="btn btn-warning">Edit</a>
                                 <a href="" class="btn btn-danger">Hapus</a>
                             </td>
                         </tr>
