@@ -13,7 +13,7 @@
     <section class="section">
         <div class="card">
             <div class="card-body">
-                <a href="admin/student/create/" class="btn btn-primary my-3">+ Student</a>
+                <a href="/admin/student/create/" class="btn btn-primary my-3">+ Student</a>
                 <table class="table">
                     <tr>
                         <th>No</th>
@@ -21,6 +21,7 @@
                         <th>NIM</th>
                         <th>Class</th>
                         <th>Major</th>
+                        <th>Courses</th>
                         <th>Action</th>
                     </tr>
                     @foreach ($students as $student)
@@ -30,6 +31,7 @@
                             <td>{{ $student->nim }}</td>
                             <td>{{ $student->class }}</td>
                             <td>{{ $student->major }}</td>
+                            <td>{{ $student->course->name ?? 'Tidak ada data'}}</td>
                             <td class="d-flex">
                                 <a href="/admin/student/edit/{{ $student->id }}" class="btn btn-warning me-2">Edit</a>
                                 <form action="/admin/student/delete/{{ $student->id }}" method="post">
