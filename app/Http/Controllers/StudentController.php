@@ -64,9 +64,12 @@ class StudentController extends Controller
     {
         //cari data student berdasarkan id
         $student = Student::find($id);
+        $course = Course::all();
+
 
         return view('admin.contents.student.edit', [
-            'student' => $student
+            'student' => $student,
+            'course' => $course,
         ]);
     }
 
@@ -75,6 +78,7 @@ class StudentController extends Controller
     {
         //cari data student berdasarkan id
         $student = Student::find($id); // select * from students where id = $id;
+    
 
         //validasi data yang diterima
         $request->validate([
